@@ -1,6 +1,6 @@
 // npm install @wormhole-foundation/sdk @wormhole-foundation/sdk/evm @wormhole-foundation/sdk/solana
 
-import { wormhole, TokenId, Wormhole } from "@wormhole-foundation/sdk";
+import { wormhole, Wormhole } from "@wormhole-foundation/sdk";
 import evm from "@wormhole-foundation/sdk/evm";
 import solana from "@wormhole-foundation/sdk/solana";
 //import { getSigner, waitLog } from "./helpers/index.js"; // Ensure helpers are implemented for signing the transactions
@@ -18,8 +18,8 @@ async function main() {
     const rcvChain = wh.getChain("Ethereum"); // Moonbeam is EVM-compatible
   
     // Prepare the token details for transfer
-     const token = Wormhole.tokenId("Solana", "123test"); // change to MapMetrics's contract address
-     console.log(token);
+    const token = Wormhole.tokenId("Solana", "123test"); // change to MapMetrics's contract address
+    console.log(token);
 
      // TODO look at sample repo: https://github.com/wormhole-foundation/wormhole-sdk-ts/blob/main/examples/src/tokenBridge.ts
      // to see how to transfer tokens
