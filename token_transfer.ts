@@ -28,7 +28,7 @@ const PRIVATE_EVM = process.env.METAMASK_PRIVATE as string;
 // Used to convert private key to 64 byte representation
 const { decode } = pkg;
 
-// Objects that will need to be based into wormhole's tokenTransfer function as source & destination
+// Objects that will need to be passed into wormhole's tokenTransfer function as source & destination
 // Needs to have proper types assigned to them - still trying to figure out 
 type SourceSigner<N, Chain> = {
   address: ChainAddress;
